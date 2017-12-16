@@ -1,0 +1,24 @@
+{
+  "name": "markdown-it-examples",
+  "version": "1.0.0",
+  "description": "To get babel up and running:",
+  "main": "lex1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormasm/markdown-it-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stormasm/markdown-it-examples/issues"
+  },
+  "homepage": "https://github.com/stormasm/markdown-it-examples#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
