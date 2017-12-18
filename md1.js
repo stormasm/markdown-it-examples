@@ -13,3 +13,8 @@ console.log(isJSON(resultjson));
 
 result = md.render('_hola_')
 console.log(result);
+
+var fs   = require('fs');
+var path = require('path');
+var source = fs.readFileSync(path.join(__dirname, './sample1.md'), 'utf8')
+console.log(md.render(source));
