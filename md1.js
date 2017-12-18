@@ -2,8 +2,14 @@ require('babel-core/register');
 var isJSON = require('is-json');
 
 var md = require('markdown-it')();
-var result = md.parse('hola');
-result = JSON.stringify(result, null, 2);
+// assumes you have markdown-it src code available
+// var md = require('./../markdown-it')();
 
-console.log(isJSON(result));
-// console.log(result)
+var result = md.parse('hola');
+resultjson = JSON.stringify(result, null, 2);
+
+console.log(isJSON(resultjson));
+// console.log(resultjson)
+
+result = md.render('_hola_')
+console.log(result);
