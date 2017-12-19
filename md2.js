@@ -13,18 +13,8 @@ var md = require('./../markdown-it')();
 var tokens = md.parse(source)
 //console.log(md.render(source));
 
-var ok = { html: false,
-xhtmlOut: false,
-breaks: false,
-langPrefix: 'language-',
-linkify: false,
-typographer: false,
-quotes: '“”‘’',
-highlight: null,
-maxNesting: 100 }
-
-
+var options = require('./../markdown-it/lib/presets/default');
 var Renderer = require('./../markdown-it/lib/renderer');
 token_renderer = new Renderer();
-html = token_renderer.render(tokens,ok)
+html = token_renderer.render(tokens,options)
 console.log(html)
