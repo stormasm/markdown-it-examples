@@ -10,7 +10,7 @@ var md = require('./../markdown-it')();
 var fs   = require('fs');
 var path = require('path');
 var source = fs.readFileSync(path.join(__dirname, './sample1.md'), 'utf8')
-console.log(md.render(source));
+//console.log(md.render(source));
 
 var tokens = md.parse(source)
 token_renderer = new Renderer();
