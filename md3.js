@@ -12,8 +12,14 @@ var path = require('path');
 var source = fs.readFileSync(path.join(__dirname, './sample1.md'), 'utf8')
 //console.log(md.render(source));
 
-var tokens = md.parse(source)
-token_renderer = new Renderer();
+var tokens = md.parse(source);
+resultjson = JSON.stringify(tokens, null, 2);
 
+//console.log(isJSON(resultjson));
+console.log(resultjson)
+
+/*
+token_renderer = new Renderer();
 html = token_renderer.render(tokens,options)
 console.log(html)
+*/
