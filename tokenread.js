@@ -1,6 +1,6 @@
 require('babel-core/register');
 
-var Renderer = require('./../markdown-it/lib/renderer');
+var Renderer = require('./lib/renderer');
 var options = require('./../markdown-it/lib/presets/default');
 
 var fs   = require('fs');
