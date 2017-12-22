@@ -13,7 +13,7 @@ var path = require('path');
 var source = fs.readFileSync(path.join('/tmp21/markdown-it-samples', './sample3.md'), 'utf8')
 //console.log(md.render(source));
 
-var tokens = md.parse(source);
+var tokens = md.parse(source, {});
 resultjson = JSON.stringify(tokens, null, 2);
 
 //console.log(isJSON(resultjson));
