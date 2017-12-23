@@ -15,18 +15,11 @@ tokens = JSON.parse(tokens);
 var token_renderer = new Renderer();
 var mystring = token_renderer.render(tokens,options)
 var mylength = mystring.length;
-//console.log(typeof(html))
 
-var commaIndex = mystring.lastIndexOf(",")
+var final = mystring.slice(0,mylength - 1);
 
-var my1 = mystring.slice(0,mylength - 1);
-//console.log(my1);
 var left = "["
 var right = "]"
-var final = left.concat(my1,right)
-//console.log(final);
-
-//var resultjson = JSON.stringify(final);
-
+var final = left.concat(final,right)
 console.log(isJSON(final));
-// console.log(resultjson)
+// console.log(final)
