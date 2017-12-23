@@ -1,6 +1,5 @@
 require('babel-core/register');
 
-//var Renderer = require('./../markdown-it/lib/renderer');
 var Renderer = require('./lib/renderer');
 var options = require('./../markdown-it/lib/presets/default');
 var isJSON = require('is-json');
@@ -13,25 +12,13 @@ var fs   = require('fs');
 var path = require('path');
 //var source = fs.readFileSync(path.join(__dirname, './sample1.md'), 'utf8')
 var source = fs.readFileSync(path.join('/tmp21/markdown-it-samples', './sample3.md'), 'utf8')
-
 var tokens = md.parse(source, {});
-
-//resultjson = JSON.stringify(tokens, null, 2);
-
-//
-
-
-
-//var fs   = require('fs');
-//var path = require('path');
-//var tokens = fs.readFileSync(path.join(__dirname, './sample3.json'), 'utf8')
-
-//tokens = JSON.parse(tokens);
 
 var token_renderer = new Renderer();
 var mystring = token_renderer.render(tokens,options)
 var mylength = mystring.length;
 
+// get rid of the final character which is a comma
 var final = mystring.slice(0,mylength - 1);
 
 var left = "["
