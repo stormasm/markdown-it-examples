@@ -32,8 +32,10 @@ var final = left.concat(final,right)
 repo = JSON.parse(final)
 
 repo.forEach(function(element) {
-    console.log('---');
     gh = element.href;
     // test to see if this is a github repo
-    console.log(github(gh) + ' ' + gh);
+    hit = github(gh);
+    if (hit) {
+      console.log(gh);
+    }
 });
