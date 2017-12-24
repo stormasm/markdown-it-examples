@@ -24,5 +24,14 @@ var final = mystring.slice(0,mylength - 1);
 var left = "["
 var right = "]"
 var final = left.concat(final,right)
-console.log(isJSON(final));
+//console.log(isJSON(final));
 // console.log(final)
+
+repo = JSON.parse(final)
+
+repo.forEach(function(element) {
+    console.log('---');
+    gh = element.href;
+    // test to see if this is a github repo
+    console.log(gh);
+});
