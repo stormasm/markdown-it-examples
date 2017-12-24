@@ -1,11 +1,11 @@
 require('babel-core/register');
 
-var Renderer = require('./../markdown-it/lib/renderer');
-var options = require('./../markdown-it/lib/presets/default');
+var Renderer = require('./../../markdown-it/lib/renderer');
+var options = require('./../../markdown-it/lib/presets/default');
 
 // var md = require('markdown-it')();
 // assumes you have markdown-it src code available
-var md = require('./../markdown-it')();
+var md = require('./../../markdown-it')();
 
 var fs   = require('fs');
 var path = require('path');

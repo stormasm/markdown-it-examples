@@ -1,12 +1,12 @@
 require('babel-core/register');
 
-var Renderer = require('./lib/renderer');
-var options = require('./../markdown-it/lib/presets/default');
+var Renderer = require('./../lib/renderer');
+var options = require('./../../markdown-it/lib/presets/default');
 var isJSON = require('is-json');
 
 // var md = require('markdown-it')();
 // assumes you have markdown-it src code available
-var md = require('./../markdown-it')();
+var md = require('./../../markdown-it')();
 
 var fs   = require('fs');
 var path = require('path');

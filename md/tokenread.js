@@ -3,12 +3,12 @@
 require('babel-core/register');
 var isJSON = require('is-json');
 
-var Renderer = require('./lib/renderer');
-var options = require('./../markdown-it/lib/presets/default');
+var Renderer = require('./../lib/renderer');
+var options = require('./../../markdown-it/lib/presets/default');
 
 var fs   = require('fs');
 var path = require('path');
-var tokens = fs.readFileSync(path.join(__dirname, './sample3.json'), 'utf8')
+var tokens = fs.readFileSync(path.join(__dirname, './../samples/sample2.json'), 'utf8')
 
 tokens = JSON.parse(tokens);
 
