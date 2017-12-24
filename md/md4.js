@@ -1,5 +1,7 @@
 require('babel-core/register');
 
+var github = require('./../misc/regex');
+
 var Renderer = require('./../lib/renderer');
 var options = require('./../../markdown-it/lib/presets/default');
 var isJSON = require('is-json');
@@ -33,5 +35,5 @@ repo.forEach(function(element) {
     console.log('---');
     gh = element.href;
     // test to see if this is a github repo
-    console.log(gh);
+    console.log(github(gh) + ' ' + gh);
 });
