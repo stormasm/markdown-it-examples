@@ -26,16 +26,22 @@ var final = mystring.slice(0,mylength - 1);
 var left = "["
 var right = "]"
 var final = left.concat(final,right)
-//console.log(isJSON(final));
+// console.log(isJSON(final));
 // console.log(final)
 
 repo = JSON.parse(final)
+var ghary = [];
 
 repo.forEach(function(element) {
     gh = element.href;
     // test to see if this is a github repo
     hit = github(gh);
     if (hit) {
-      console.log(gh);
+      // console.log(element);
+      ghary.push(element)
     }
 });
+
+var finalgh = JSON.stringify(ghary);
+// console.log(isJSON(finalgh));
+// console.log(finalgh);
